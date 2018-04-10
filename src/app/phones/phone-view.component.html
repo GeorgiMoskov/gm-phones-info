@@ -1,0 +1,10 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ phone.brand }}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="phone.imgUrl" alt="Phone pic">
+    <mat-card-content>
+        <p>{{phone.price | currency}}</p>
+    </mat-card-content>
+  </mat-card>
