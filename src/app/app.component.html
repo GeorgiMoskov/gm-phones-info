@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayoutGap="15px">
+<div fxLayout="row wrap" fxLayoutGap="15px" class="box-order-and-search">
   <mat-form-field fxFlex="20%">
     <mat-select (change)="onChange()" [(ngModel)]="order" placeholder="Select Order">
       <mat-option value="asc">Ascending</mat-option>
@@ -13,6 +13,10 @@
       <mat-option value="model">Model</mat-option>
     </mat-select>
   </mat-form-field>
+  <mat-form-field fxFlex="40%">
+    <input matInput placeholder="Search" (input)="onSearch()" [(ngModel)]="search">
+</mat-form-field>
+
 </div>
 
 <app-phone-list [phones]="filteredPhones"></app-phone-list>

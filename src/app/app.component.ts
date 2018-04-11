@@ -18,9 +18,10 @@ import {
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  order: String = 'asc';
-  byType: String = 'brand';
+  order: string = 'asc';
+  byType: string = 'brand';
   filteredPhones: Phone[];
+  search: string;
 
   phones: Phone[] = [{
       brand: 'Samsung',
@@ -82,9 +83,13 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
 
-
-
+  onSearch(): void {
+    this.filteredPhones = this.phones.filter(x =>
+      x.brand.toLowerCase().indexOf(this.search) >= 0 ||
+      x.description.toLowerCase().indexOf(this.search) >= 0 ||
+      x.model.toLowerCase().indexOf(this.search) >= 0);
   }
 
   ngOnInit() {

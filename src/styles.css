@@ -1,2 +1,8 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.box-header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
